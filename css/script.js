@@ -31,7 +31,7 @@ reset.addEventListener("click",function(){
 
 function stopWatch(){
    
-    if(timer){
+    if(timer==true){
         second++;
         if(second == 60){
             minute++;
@@ -61,6 +61,5 @@ function stopWatch(){
     document.getElementById("hour").innerHTML = h ;
     document.getElementById("minute").innerHTML = m ;
     document.getElementById("second").innerHTML = s ;
-    setTimeout(stopWatch, 1000); 
 }
-
+setInterval(stopWatch,1000);
